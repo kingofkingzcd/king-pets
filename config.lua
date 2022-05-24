@@ -22,5 +22,8 @@ Config.Lang = {
     ['petrabbitfin'] = 'Done Petting The Bun Bun',
     ['piglabel'] = 'Pet The Bacon Machine',
     ['petpig'] = 'Petting The Bacon Machine',
-    ['petpigfin'] = 'Done Petting The Bacon Machine'
+    ['petpigfin'] = 'Done Petting The Bacon Machine',
+    ['catlabel'] = 'Pet The Kitty',
+    ['petcat'] = 'Petting The Kitty Cat',
+    ['petcatfin'] = 'Done Petting Kitty'
 }
