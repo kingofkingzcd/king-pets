@@ -198,3 +198,36 @@ RegisterNetEvent('king-pets:client:PetPig', function()
     end)
 end)
 
+--Cat--
+exports[TargetName]:AddTargetModel(a_c_cat_01, {
+    options = {
+        {
+            event = 'king-pets:client:PetCat',
+            icon = Config.Lang['dogicon'],
+            label = Config.Lang['catlabel'],
+        },
+    },
+distance = 2.0 
+})
+RegisterNetEvent('king-pets:client:PetCat', function()
+    local player = PlayerPedId()
+    Core.Functions.Progressbar('king_petcat', Config.Lang['petcat'], Config.PetTime, false, false, {
+        disableMovement = true, 
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {
+        animDict = 'amb@medic@standing@kneel@idle_a', 
+        anim = 'idle_a', 
+        --flags = 49,
+    }, {}, {}, function()
+        TriggerServerEvent(RemoveStress, Config.DogStress)
+        TriggerEvent('king-pets:notifications', Config.Lang['petcatfin'], 'success')
+        ClearPedTasks(player)
+    end, function()
+        TriggerEvent('inventory:client:busy:status', false)
+        TriggerEvent('king-pets:notifications', Config.Lang['cancel'], 'error')
+        ClearPedTasks(player)
+    end)
+end)
+
