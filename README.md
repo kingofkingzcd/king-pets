@@ -1,5 +1,6 @@
 # king-pets
-simple client side script to make domestic pets able to be petted to relieve stress
+# made by KingofKingz
+simple client side script that enables petting animals to relieve stress
 
 Dependencies
 qb-core
